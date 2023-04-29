@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import iPhoneNumberField
 
 struct SignUpView: View {
     @State private var username = ""
     @State private var email = ""
     @State private var password = ""
     @State private var confirmPassword = ""
+    @State private var fromPhone = false
+    @State private var phone = "0"
 
     var body: some View {
         VStack {
@@ -19,34 +22,48 @@ struct SignUpView: View {
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .padding(.bottom, 40)
+            if (!fromPhone) {
 
-            TextField("Username", text: $username)
-                .padding(.horizontal)
-                .frame(height: 50)
-                .background(Color.gray.opacity(0.2))
-                .cornerRadius(10)
-                .padding(.horizontal)
+                TextField("Username", text: $username)
+                    .padding(.horizontal)
+                    .frame(height: 50)
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(10)
+                    .padding(.horizontal)
 
-            TextField("Email", text: $email)
-                .padding(.horizontal)
-                .frame(height: 50)
-                .background(Color.gray.opacity(0.2))
-                .cornerRadius(10)
-                .padding(.horizontal)
+                TextField("Email", text: $email)
+                    .padding(.horizontal)
+                    .frame(height: 50)
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(10)
+                    .padding(.horizontal)
 
-            SecureField("Password", text: $password)
-                .padding(.horizontal)
-                .frame(height: 50)
-                .background(Color.gray.opacity(0.2))
-                .cornerRadius(10)
-                .padding(.horizontal)
+                SecureField("Password", text: $password)
+                    .padding(.horizontal)
+                    .frame(height: 50)
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(10)
+                    .padding(.horizontal)
 
-            SecureField("Confirm Password", text: $confirmPassword)
-                .padding(.horizontal)
-                .frame(height: 50)
-                .background(Color.gray.opacity(0.2))
-                .cornerRadius(10)
-                .padding(.horizontal)
+                SecureField("Confirm Password", text: $confirmPassword)
+                    .padding(.horizontal)
+                    .frame(height: 50)
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(10)
+                    .padding(.horizontal)
+            } else {
+                iPhoneNumberField("Phone number", text: $phone)
+                    .flagHidden(false)
+                    .flagSelectable(true)
+                    .keyboardType(.numberPad)
+                    .padding(.horizontal)
+                    .frame(height: 50)
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(10)
+                    .padding(.horizontal)
+                    
+            }
+            
 
             Button(action: {
                            // Действие, которое происходит при нажатии на кнопку регистрации
@@ -66,6 +83,26 @@ struct SignUpView: View {
                        }
 
             Spacer()
+            if (!fromPhone) {
+                Button(action: {fromPhone = true}) {
+                    Text("register with phone number")
+                        .foregroundColor(.green)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .padding(.horizontal)
+                        .background(Color.white)
+                }
+            } else {
+                Button(action: {fromPhone = false}) {
+                    Text("register with phone email")
+                        .foregroundColor(.green)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .padding(.horizontal)
+                        .background(Color.white)
+                }
+            }
+            
         }
         .padding()
     }

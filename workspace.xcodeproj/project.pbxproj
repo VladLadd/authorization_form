@@ -19,6 +19,12 @@
 		F522E3EA29D0B24100FC7EC5 /* workspaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F522E3E929D0B24100FC7EC5 /* workspaceUITests.swift */; };
 		F522E3EC29D0B24100FC7EC5 /* workspaceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F522E3EB29D0B24100FC7EC5 /* workspaceUITestsLaunchTests.swift */; };
 		F522E3F929D0C76300FC7EC5 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F522E3F829D0C76300FC7EC5 /* SignUpView.swift */; };
+		F5AD6B6629F67F0000BAED84 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5AD6B6529F67F0000BAED84 /* GoogleService-Info.plist */; };
+		F5AD6B6929F6848500BAED84 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = F5AD6B6829F6848500BAED84 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		F5AD6B6B29F6848500BAED84 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F5AD6B6A29F6848500BAED84 /* FirebaseAuth */; };
+		F5AD6B6D29F6848500BAED84 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = F5AD6B6C29F6848500BAED84 /* FirebaseAuthCombine-Community */; };
+		F5AD6B6F29F6848500BAED84 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = F5AD6B6E29F6848500BAED84 /* FirebaseDatabase */; };
+		F5CD087B29FDA6B60011BDB0 /* iPhoneNumberField in Frameworks */ = {isa = PBXBuildFile; productRef = F5CD087A29FDA6B60011BDB0 /* iPhoneNumberField */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +60,7 @@
 		F522E3E929D0B24100FC7EC5 /* workspaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workspaceUITests.swift; sourceTree = "<group>"; };
 		F522E3EB29D0B24100FC7EC5 /* workspaceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workspaceUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F522E3F829D0C76300FC7EC5 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		F5AD6B6529F67F0000BAED84 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +68,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5AD6B6929F6848500BAED84 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				F5AD6B6D29F6848500BAED84 /* FirebaseAuthCombine-Community in Frameworks */,
+				F5AD6B6F29F6848500BAED84 /* FirebaseDatabase in Frameworks */,
+				F5CD087B29FDA6B60011BDB0 /* iPhoneNumberField in Frameworks */,
+				F5AD6B6B29F6848500BAED84 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +133,7 @@
 				F522E3CF29D0B24100FC7EC5 /* Preview Content */,
 				F522E3F829D0C76300FC7EC5 /* SignUpView.swift */,
 				F522D78529D791CE00EF4626 /* ProfileView.swift */,
+				F5AD6B6529F67F0000BAED84 /* GoogleService-Info.plist */,
 			);
 			path = workspace;
 			sourceTree = "<group>";
@@ -166,6 +179,13 @@
 			dependencies = (
 			);
 			name = workspace;
+			packageProductDependencies = (
+				F5AD6B6829F6848500BAED84 /* FirebaseAnalyticsWithoutAdIdSupport */,
+				F5AD6B6A29F6848500BAED84 /* FirebaseAuth */,
+				F5AD6B6C29F6848500BAED84 /* FirebaseAuthCombine-Community */,
+				F5AD6B6E29F6848500BAED84 /* FirebaseDatabase */,
+				F5CD087A29FDA6B60011BDB0 /* iPhoneNumberField */,
+			);
 			productName = workspace;
 			productReference = F522E3C629D0B23F00FC7EC5 /* workspace.app */;
 			productType = "com.apple.product-type.application";
@@ -238,6 +258,10 @@
 				Base,
 			);
 			mainGroup = F522E3BD29D0B23F00FC7EC5;
+			packageReferences = (
+				F5AD6B6729F6848500BAED84 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				F5CD087929FDA6B60011BDB0 /* XCRemoteSwiftPackageReference "iPhoneNumberField" */,
+			);
 			productRefGroup = F522E3C729D0B23F00FC7EC5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -256,6 +280,7 @@
 			files = (
 				F522E3D129D0B24100FC7EC5 /* Preview Assets.xcassets in Resources */,
 				F522E3CE29D0B24100FC7EC5 /* Assets.xcassets in Resources */,
+				F5AD6B6629F67F0000BAED84 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +472,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"workspace/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -475,6 +501,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"workspace/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -605,6 +632,53 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F5AD6B6729F6848500BAED84 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+		F5CD087929FDA6B60011BDB0 /* XCRemoteSwiftPackageReference "iPhoneNumberField" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MojtabaHs/iPhoneNumberField.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.10.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F5AD6B6829F6848500BAED84 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5AD6B6729F6848500BAED84 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		F5AD6B6A29F6848500BAED84 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5AD6B6729F6848500BAED84 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		F5AD6B6C29F6848500BAED84 /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5AD6B6729F6848500BAED84 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		F5AD6B6E29F6848500BAED84 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5AD6B6729F6848500BAED84 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		F5CD087A29FDA6B60011BDB0 /* iPhoneNumberField */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5CD087929FDA6B60011BDB0 /* XCRemoteSwiftPackageReference "iPhoneNumberField" */;
+			productName = iPhoneNumberField;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		F522E3D429D0B24100FC7EC5 /* workspace.xcdatamodeld */ = {
